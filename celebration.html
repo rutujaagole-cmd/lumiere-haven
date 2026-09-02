@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lumiere Haven | Celebration</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#f8f5ef;
+}
+
+nav{
+background:#202020;
+padding:22px 7%;
+display:flex;
+justify-content:space-between;
+}
+
+.logo{
+color:#d6b36a;
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.container{
+padding:60px 7%;
+text-align:center;
+}
+
+h1{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.subtitle{
+margin-bottom:40px;
+color:#666;
+}
+
+.packages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.package{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px #ddd;
+}
+
+.package h2{
+margin-bottom:15px;
+}
+
+.package li{
+list-style:none;
+padding:8px;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#b28a3d;
+margin:15px;
+}
+
+button{
+background:#d6b36a;
+border:0;
+padding:12px 25px;
+border-radius:25px;
+cursor:pointer;
+}
+
+@media(max-width:800px){
+.packages{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">Lumiere Haven</div>
+
+<div>
+<a href="index.html">Home</a>
+<a href="rooms.html">Rooms</a>
+<a href="restaurant.html">Restaurant</a>
+<a href="celebration.html">Celebration</a>
+<a href="location.html">Location</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+<div class="container">
+
+<h1>Celebrate Your Special Moments</h1>
+
+<p class="subtitle">
+Birthday • Anniversary • Family Party • Special Events
+</p>
+
+<div class="packages">
+
+<div class="package">
+
+<h2>🎈 Basic Decoration</h2>
+
+<ul>
+<li>Balloon Decoration</li>
+<li>Welcome Board</li>
+<li>Table Decoration</li>
+<li>Basic Cake Table</li>
+</ul>
+
+<div class="price">₹2,500</div>
+
+<button onclick="book('Basic Decoration',2500)">
+Book Package
+</button>
+
+</div>
+
+<div class="package">
+
+<h2>✨ Premium Decoration</h2>
+
+<ul>
+<li>Premium Balloon Decoration</li>
+<li>Theme Backdrop</li>
+<li>Table Decoration</li>
+<li>Welcome Board</li>
+<li>Photo Area</li>
+</ul>
+
+<div class="price">₹5,000</div>
+
+<button onclick="book('Premium Decoration',5000)">
+Book Package
+</button>
+
+</div>
+
+<div class="package">
+
+<h2>👑 Luxury Celebration</h2>
+
+<ul>
+<li>Luxury Theme Decoration</li>
+<li>Premium Backdrop</li>
+<li>Flower Decoration</li>
+<li>Photo Booth</li>
+<li>Table Setup</li>
+</ul>
+
+<div class="price">₹8,000</div>
+
+<button onclick="book('Luxury Celebration',8000)">
+Book Package
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function book(packageName,price){
+
+let guests=prompt("Enter number of guests:");
+
+if(guests===null || guests===""){
+return;
+}
+
+let advance=price*0.10;
+
+alert(
+"Celebration Booking\n\n"+
+"Package: "+packageName+
+"\nGuests: "+guests+
+"\nPackage Price: ₹"+price+
+"\n\nMinimum 10% Advance: ₹"+advance+
+"\n\nProceed to Payment"
+);
+
+}
+
+</script>
+
+</body>
+</html>
